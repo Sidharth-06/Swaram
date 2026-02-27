@@ -1,0 +1,38 @@
+# 1. Ignore EVERYTHING by default
+*
+# 2. Re-include directories so we can whitelist files inside them
+!*/
+
+# 3. Explicitly block massive/cache directories AGAIN just to be safe
+.git/
+.hf_cache/
+**/.hf_cache/
+**/models--*
+**/datasets--*
+miniconda3/
+Miniconda3/
+venv/
+.venv/
+F5-TTS/
+parler_dataset/
+parler_dataset_precomputed/
+svaram_checkpoints/
+svaram_outputs/
+expresso_tests/
+expresso_intense_laughs/
+outputs/
+__pycache__/
+
+# 4. Whitelist ONLY the custom Parler-TTS / EmotionAdapter files
+!train.py
+!precompute_codes.py
+!inference_svaram.py
+!test_custom.py
+!test_parler.py
+!test_expresso_prompts.py
+!test_intense_laughs.py
+!svaram/
+!svaram/architecture.py
+!svaram/__init__.py
+!.gitignore
+!README.md
