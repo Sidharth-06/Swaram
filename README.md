@@ -78,7 +78,21 @@ graph TD
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
    pip install git+https://github.com/huggingface/parler-tts.git
    pip install datasets accelerate bitsandbytes peft wandb soundfile
+---
+
+## 🐳 Docker Deployment (Easiest Method)
+
+We provide a fully containerized environment equipped with PyTorch 2.1+, CUDA 12.1, and all necessary audio-processing libraries (`libsndfile1`, `ffmpeg`).
+
+1. **Build the Image:**
+   ```bash
+   docker build -t svaram-engine .
    ```
+2. **Run Inference with GPU Acceleration:**
+   ```bash
+   docker run --gpus all -v $(pwd)/svaram_outputs:/app/svaram_outputs svaram-engine
+   ```
+   *Note: Providing `-v $(pwd)/svaram_outputs:/app/svaram_outputs` ensures that the `.wav` files generated inside the container are saved back to your host machine's folder.*
 
 ---
 

@@ -35,4 +35,7 @@ __pycache__/
 !svaram/architecture.py
 !svaram/__init__.py
 !.gitignore
+!.dockerignore
 !README.md
+!Dockerfile
+!requirements.txt
