@@ -26,26 +26,26 @@ graph TD
     classDef custom fill:#702459,stroke:#b83280,stroke-width:2px,color:#fff
     classDef output fill:#276749,stroke:#38a169,stroke-width:2px,color:#fff
 
-    Desc[/"Description Prompt (e.g., 'speaking with intense laughter')"\]:::input
-    Text[/"Text Prompt (e.g., 'This is so funny!')"\]:::input
+    Desc["Description Prompt"]:::input
+    Text["Text Prompt"]:::input
 
-    T5[Base T5 Text Encoder]:::model
+    T5["Base T5 Text Encoder"]:::model
     
-    subgraph Svaram Custom Architecture
-        Adapter[EmotionAdapter <br> 768-dim Projection]:::custom
-        Proj[enc_to_dec_proj <br> 1024-dim Up-sample]:::custom
-        LoRA[LoRA Weights <br> Rank 8, Alpha 32]:::custom
+    subgraph CustomArch ["Svaram Custom Architecture"]
+        Adapter["EmotionAdapter (768-dim)"]:::custom
+        Proj["enc_to_dec_proj (1024-dim)"]:::custom
+        LoRA["LoRA Weights (Rank 8)"]:::custom
     end
     
-    Decoder[Parler-TTS Decoder]:::model
-    Audio[/"Generated Audio (.wav)"\]:::output
+    Decoder["Parler-TTS Decoder"]:::model
+    Audio["Generated Audio (.wav)"]:::output
 
     Desc --> T5
     Text --> Decoder
-    T5 -->|Original Hidden States| Adapter
-    Adapter -->|Emotion Conditioned| Proj
-    Proj -->|Modified Hidden States| Decoder
-    LoRA -.->|Inject| Decoder
+    T5 -->|"Original Hidden States"| Adapter
+    Adapter -->|"Emotion Conditioned"| Proj
+    Proj -->|"Modified Hidden States"| Decoder
+    LoRA -.->|"Inject"| Decoder
     Decoder --> Audio
 ```
 
