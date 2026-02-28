@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaram Voice Engine - Audio Samples</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-top: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.2em;
+        }
+
+        .sample-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .sample-title {
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .prompt-text {
+            background-color: #0d1117;
+            padding: 15px;
+            border-radius: 6px;
+            font-style: italic;
+            color: #8b949e;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #21262d;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display,
+        audio::-webkit-media-controls-timeline,
+        audio::-webkit-media-controls-mute-button,
+        audio::-webkit-media-controls-volume-slider {
+            filter: invert(1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #8b949e;
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎙️ Swaram Engine</h1>
+            <div class="subtitle">Expressive & Controllable English Text-to-Speech</div>
+            <p style="margin-top: 20px;">
+                <a href="https://github.com/Sidharth-06/Swaram">← Back to GitHub Repository</a>
+            </p>
+        </header>
+
+        <h2>🎧 Audio Samples</h2>
+        <p>Listen to how the Swaram custom EmotionAdapter handles deep emotional cues natively from the description prompt without explicitly speaking the instruction tags.</p>
+
+        <div class="sample-card">
+            <h3 class="sample-title">1. Neutral Reading</h3>
+            <div class="prompt-text">"A female speaker with a clear, pleasant voice speaking at a natural pace."</div>
+            <audio controls preload="metadata">
+                <source src="svaram_neutral_0.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="sample-card">
+            <h3 class="sample-title">2. Intense Laughing</h3>
+            <div class="prompt-text">"A female speaker giggling and bursting into cracking, intense laughter."</div>
+            <audio controls preload="metadata">
+                <source src="svaram_happy_1.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="sample-card">
+            <h3 class="sample-title">3. Deep Sigh & Sadness</h3>
+            <div class="prompt-text">"A female speaker sighing deeply and speaking with a sad tone."</div>
+            <audio controls preload="metadata">
+                <source src="svaram_sad_2.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="sample-card">
+            <h3 class="sample-title">4. Confused / Hushed</h3>
+            <div class="prompt-text">"A female speaker speaking in a hushed, confused tone."</div>
+            <audio controls preload="metadata">
+                <source src="svaram_confused_3.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="footer">
+            <p>Generated natively on 8GB VRAM using custom LoRA weights.<br>
+            Powered by Parler-TTS Mini Architecture.</p>
+        </div>
+    </div>
+
+</body>
+</html>

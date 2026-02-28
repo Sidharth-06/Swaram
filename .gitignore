@@ -43,3 +43,5 @@ __pycache__/
 !assets/audio/
 !assets/audio/*.wav
 !assets/audio/*.mp4
+!docs/
+!docs/*
