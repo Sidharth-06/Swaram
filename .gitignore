@@ -39,3 +39,6 @@ __pycache__/
 !README.md
 !Dockerfile
 !requirements.txt
+!assets/
+!assets/audio/
+!assets/audio/*.wav

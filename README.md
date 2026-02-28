@@ -59,6 +59,23 @@ graph TD
 
 ---
 
+## 🎧 Audio Samples
+
+Listen to how Swaram handles deep emotional cues directly from the description prompt without speaking the instruction aloud:
+
+* **[Neutral Reading](assets/audio/svaram_neutral_0.wav)** 
+  *(Prompt: "A female speaker with a clear, pleasant voice speaking at a natural pace.")*
+* **[Intense Laughing](assets/audio/svaram_happy_1.wav)** 
+  *(Prompt: "A female speaker giggling and bursting into cracking, intense laughter.")*
+* **[Deep Sigh & Sadness](assets/audio/svaram_sad_2.wav)** 
+  *(Prompt: "A female speaker sighing deeply and speaking with a sad tone.")*
+* **[Confused / Hushed](assets/audio/svaram_confused_3.wav)** 
+  *(Prompt: "A female speaker speaking in a hushed, confused tone.")*
+
+> *Note: These are raw outputs from the `svaram_checkpoints/epoch10` LoRA weights running via our custom EmotionAdapter pipeline.*
+
+---
+
 ## 🚀 Installation & Setup
 
 1. **Clone the repository:**
